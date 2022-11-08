@@ -42,7 +42,7 @@ const Login = () => {
                 </form>
             </div>
             <div className='hidden sm:block'>
-                <img className='w-full h-full object-cover' src="https://cdn0.weddingwire.com/vendor/400971/3_2/960/jpg/thifault710_51_179004-164158080548866.jpeg" alt="" />
+                <img className='w-5/6 h-full object-cover' src="https://cdn0.weddingwire.com/vendor/400971/3_2/960/jpg/thifault710_51_179004-164158080548866.jpeg" alt="" />
             </div>
 
 

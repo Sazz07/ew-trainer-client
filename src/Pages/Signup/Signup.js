@@ -12,7 +12,7 @@ const Signup = () => {
         <div>
             <div className='grid grid-cols-1 sm:grid-cols-2 h-screen w-full'>
                 <div className='hidden sm:block'>
-                    <img className='w-full h-full object-cover' src="https://cdn0.weddingwire.com/vendor/400971/3_2/960/jpg/thifault710_51_179004-164158080548866.jpeg" alt="" />
+                    <img className='w-full h-full object-cover ml-20' src="https://cdn0.weddingwire.com/vendor/400971/3_2/960/jpg/thifault710_51_179004-164158080548866.jpeg" alt="" />
                 </div>
                 <div className='flex flex-col justify-center'>
                     <form className='shadow-lg max-w-[400px] w-full mx-auto rounded-lg bg-gray-200 p-8 px-8'>

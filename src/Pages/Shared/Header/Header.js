@@ -29,12 +29,12 @@ const Header = () => {
         </li>
         <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
             <Link
-                to="/"
+                to="/blog"
                 aria-label="Product pricing"
                 title="Product pricing"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-rose-400"
             >
-                Pricing
+                Blog
             </Link>
         </li>
         <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
@@ -74,7 +74,7 @@ const Header = () => {
     </>
 
     return (
-        <div className="shadow-md px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8">
+        <div className="shadow-md px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-8">
             <div className="relative flex items-center justify-between">
                 <div className="flex items-center">
                     <Link
