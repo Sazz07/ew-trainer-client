@@ -52,14 +52,15 @@ const Header = () => {
     const menuItem2 = <>
         <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
             <Link
-                to="/"
+                to="/login"
                 aria-label="Sign in"
                 title="Sign in"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-rose-400"
             >
-                Sign in
+                Log In
             </Link>
         </li>
+        
         <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
             <Link
                 to="/"
