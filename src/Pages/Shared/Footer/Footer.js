@@ -4,7 +4,7 @@ import icon from '../../../assets/Icon/icon.svg';
 
 const Footer = () => {
     return (
-        <div>
+        <div className=''>
             <footer className="px-4 divide-y bg-gray-100 text-gray-800">
                 <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                     <div className="lg:w-1/3">
