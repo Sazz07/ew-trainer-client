@@ -7,6 +7,7 @@ const auth = getAuth(app)
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    
 
 
     // create user with email and password
@@ -18,6 +19,7 @@ const AuthProvider = ({ children }) => {
 
     const authInfo = {
         user,
+        createUser,
     }
 
     return (
