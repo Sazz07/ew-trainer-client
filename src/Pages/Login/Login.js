@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 
 
 const Login = () => {
+    useTitle('Login');
     const { login, setLoading, signInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState('');
     // Checking state for toggle
