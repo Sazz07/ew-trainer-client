@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import icon from '../../../assets/Icon/icon.svg';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
-
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { logout } = useContext(AuthContext);
+
+    // handel logout
+
+    const handelLogout = () => {
+        logout()
+            .then()
+            .catch()
+    };
 
     const menuItem = <>
         <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
@@ -60,16 +69,16 @@ const Header = () => {
                 Log In
             </Link>
         </li>
-        
+
         <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
-            <Link
-                to="/"
+            <button
+                onClick={handelLogout}
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-rose-400 hover:bg-rose-700 focus:shadow-outline focus:outline-none"
                 aria-label="Sign up"
                 title="Sign up"
             >
-                Sign up
-            </Link>
+                Sign Out
+            </button>
         </li>
     </>
 
