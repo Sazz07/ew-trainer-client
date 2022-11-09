@@ -4,7 +4,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Signup = () => {
     const [error, setError] = useState();
-    const { createUser } = useContext(AuthContext);
+    const { createUser,updateUserProfile } = useContext(AuthContext);
 
     // Checking state for toggle
     const [check, setCheck] = useState(false);
@@ -34,6 +34,8 @@ const Signup = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                setError('');
+                handelUpdateUserProfile(name, photoURL);
             })
             .catch(error => {
                 console.error(error);
@@ -42,10 +44,23 @@ const Signup = () => {
 
     }
 
+    // Update user profile
+
+    const handelUpdateUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+        updateUserProfile(profile)
+        .then(() => {})
+        .catch(error => console.error(error)); 
+    };
+
     return (
         <div className='my-20'>
             <section className="p-6">
                 <div className="container grid gap-6 mx-auto lg:grid-cols-2 xl:grid-cols-5">
+                    <img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover w-full rounded-md xl:col-span-3 bg-gray-500" />
                     <div className='w-full px-6 rounded-md sm:px-12 md:px-16 xl:col-span-2'>
                         <form onSubmit={handleSignUp} className='shadow-lg max-w-[400px] w-full mx-auto rounded-lg bg-gray-200 p-8 px-8'>
                             <h2 className='text-4xl text-gray-900 font-bold text-center'>Sign Up</h2>
@@ -78,13 +93,12 @@ const Signup = () => {
                                 <p>Login with Google</p>
                             </button>
                             <button className='w-full my-5 py-2 bg-rose-500 focus:ring-2 focus:ring-offset-1 focus:ring-violet-400 text-white font-semibold rounded-lg' type='submit' disabled={!check}>Sign Up</button>
-                            <p className='text-red-500 font-medium text-center'>a:{error}</p>
+                            <p className='text-red-500 font-medium text-center'>{error}</p>
                             <p className="text-xs text-center sm:px-6 dark:text-gray-400">Already have an account?
                                 <Link to='/login' className="underline text-purple-700 font-semibold"> Log in</Link>
                             </p>
                         </form>
                     </div>
-                    <img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover w-full rounded-md xl:col-span-3 bg-gray-500" />
                 </div>
             </section>
         </div>
