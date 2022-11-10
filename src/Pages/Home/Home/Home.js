@@ -5,6 +5,7 @@ import Services from '../Services/Services/Services';
 
 const Home = () => {
     useTitle('Home');
+    
     return (
         <div>
             <Banner></Banner>
