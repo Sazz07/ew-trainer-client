@@ -1,4 +1,6 @@
 import React from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 import { useLoaderData } from 'react-router-dom';
 import Reviews from '../../../../Reviews/Reviews/Reviews';
 
@@ -14,7 +16,11 @@ const ServiceDetails = () => {
                 </div>
                 <div className="space-y-4 py-3">
                     <div className="space-y-2">
-                        <img src={img} alt="" className="block object-cover object-center w-full rounded-md h-72 bg-gray-500" />
+                        <PhotoProvider>
+                            <PhotoView src={img}>
+                                <img src={img} alt="" className="block object-cover object-center w-full rounded-md h-72 bg-gray-500" />
+                            </PhotoView>
+                        </PhotoProvider>
                     </div>
                     <div className="space-y-2">
                         <p className="leading-snug text-gray-700 font-bold text-2xl">Description: <span className='text-gray-600 text-lg font-normal'>{description}</span></p>
