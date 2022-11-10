@@ -4,7 +4,7 @@ import ServiceCard from '../ServiceCard/ServiceCard';
 
 const Services = () => {
     return (
-        <div className='max-w-screen-xl mx-auto my-10'>
+        <div className='max-w-screen-xl mx-auto my-20'>
             <h1 className='text-center text-3xl text-red-600 font-bold mb-5'>Services</h1>
             <div className=''>
                 <div className='grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center pl-4'>
