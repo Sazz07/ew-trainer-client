@@ -4,6 +4,7 @@ import icon from '../../../assets/Icon/icon.svg';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+    const { user } = useContext(AuthContext);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { logout } = useContext(AuthContext);
 
@@ -59,28 +60,56 @@ const Header = () => {
     </>
 
     const menuItem2 = <>
-        <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
-            <Link
-                to="/login"
-                aria-label="Sign in"
-                title="Sign in"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-rose-400"
-            >
-                Log In
-            </Link>
-        </li>
+        {
+            user?.email
+                ?
+                <>
+                    <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
+                        <Link
+                            to="/additems"
+                            aria-label="Add Items"
+                            title="Add Items"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-rose-400"
+                        >
+                            Add Items
+                        </Link>
+                    </li>
+                    <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
+                        <Link
+                            to="/myreviews"
+                            aria-label="My Reviews"
+                            title="My Reviews"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-rose-400"
+                        >
+                            My Reviews
+                        </Link>
+                    </li>
+                    <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
+                        <button
+                            onClick={handelLogout}
+                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-rose-400 hover:bg-rose-700 focus:shadow-outline focus:outline-none"
+                            aria-label="Sign up"
+                            title="Sign up"
+                        >
+                            Sign Out
+                        </button>
+                    </li>
+                </>
+                :
+                <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
+                    <Link
+                        to="/login"
+                        aria-label="Sign in"
+                        title="Sign in"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-rose-400"
+                    >
+                        Log In
+                    </Link>
+                </li>
 
-        <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
-            <button
-                onClick={handelLogout}
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-rose-400 hover:bg-rose-700 focus:shadow-outline focus:outline-none"
-                aria-label="Sign up"
-                title="Sign up"
-            >
-                Sign Out
-            </button>
-        </li>
+        }
     </>
+
 
     return (
         <div className="shadow-md px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-8">

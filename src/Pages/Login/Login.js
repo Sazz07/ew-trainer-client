@@ -88,7 +88,7 @@ const Login = () => {
                             </p>
                         </form>
                     </div>
-                    <img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover w-full rounded-md xl:col-span-3 bg-gray-500" />
+                    <img src="https://i.postimg.cc/bJ8hWjPk/For-Miles-agreatbodyweightworkoutwouldincludesquats-push-ups-walkinglunges.webp" alt="" className="object-cover w-full rounded-md xl:col-span-3 bg-gray-500" />
                 </div>
             </section>
         </div>

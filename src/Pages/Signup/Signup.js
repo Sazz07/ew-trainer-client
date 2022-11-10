@@ -75,7 +75,7 @@ const Signup = () => {
         <div className='my-20'>
             <section className="p-6">
                 <div className="container grid gap-6 mx-auto lg:grid-cols-2 xl:grid-cols-5">
-                    <img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover w-full rounded-md xl:col-span-3 bg-gray-500" />
+                    <img src="https://i.postimg.cc/FH9CMsk9/strong-brunette-doing-shoulder-press.webp" alt="" className="object-cover w-full rounded-md xl:col-span-3 bg-gray-500" />
                     <div className='w-full px-6 rounded-md sm:px-12 md:px-16 xl:col-span-2'>
                         <form onSubmit={handleSignUp} className='shadow-lg max-w-[400px] w-full mx-auto rounded-lg bg-gray-200 p-8 px-8'>
                             <h2 className='text-4xl text-gray-900 font-bold text-center'>Sign Up</h2>

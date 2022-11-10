@@ -6,8 +6,8 @@ import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 import Home from "../../Pages/Home/Home/Home";
 import ServiceDetails from "../../Pages/Home/Services/ServiceDetails/ServiceDetails";
 import Login from "../../Pages/Login/Login";
+import MyReviews from "../../Pages/MyReviews/MyReviews";
 import Signup from "../../Pages/Signup/Signup";
-import Reviews from "../../Reviews/Reviews/Reviews";
 
 export const router = createBrowserRouter([
     {
@@ -40,13 +40,13 @@ export const router = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
-                path: '/servicedetails/:id',
-                element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                path: '/myreviews',
+                element: <MyReviews></MyReviews>
             },
             {
-                path: '/reviews',
-                element: <Reviews></Reviews>
+                path: '/servicedetails/:id',
+                element: <ServiceDetails></ServiceDetails>,
+                loader: ({ params }) => fetch(`https://e-trainer.vercel.app/services/${params.id}`)
             },
         ]
     }

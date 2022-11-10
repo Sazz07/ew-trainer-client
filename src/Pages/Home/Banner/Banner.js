@@ -17,14 +17,6 @@ const Banner = () => {
                                 Regular physical activity is one of the most important things you can do for your health. Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities.
                             </p>
                         </div>
-                        <div className='flex flex-col items-center md:flex-row'>
-                            <a
-                                href='/books'
-                                className='inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-red-400 hover:bg-blue-700 focus:shadow-outline focus:outline-none'
-                            >
-                                <span className='mr-3'>Visit Store</span>
-                            </a>
-                        </div>
                     </div>
                     <div className='relative lg:w-1/2 '>
                         <div className='w-full lg:w-4/5 lg:ml-auto h-56  sm:h-96'>
