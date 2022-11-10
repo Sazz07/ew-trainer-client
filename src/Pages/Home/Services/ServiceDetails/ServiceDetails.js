@@ -1,21 +1,24 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import Reviews from '../../../../Reviews/Reviews/Reviews';
 
 const ServiceDetails = () => {
+    const { _id, title, price, img, description } = useLoaderData();
     return (
         <div>
             <div className="my-8 mx-auto max-w-xl p-4 shadow-lg bg-gray-200 text-violet-700 rounded-md">
                 <div className="pb-4 border-bottom bg-gray-300 p-4 rounded-md">
                     <div className="">
-                        <p className="mb-0 capitalize text-violet-700 font-semibold text-xl">asdadas jlaskjdlkasjdal</p>
+                        <p className="mb-0 capitalize text-violet-700 font-semibold text-xl">{title}</p>
                     </div>
                 </div>
                 <div className="space-y-4 py-3">
                     <div className="space-y-2">
-                        <img src="https://source.unsplash.com/random/300x300/?2" alt="" className="block object-cover object-center w-full rounded-md h-72 bg-gray-500" />
+                        <img src={img} alt="" className="block object-cover object-center w-full rounded-md h-72 bg-gray-500" />
                     </div>
                     <div className="space-y-2">
-                        <p className="leading-snug text-gray-500"><span className='font-medium text-gray-600'>Description:</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, eaque similique, maiores veritatis nostrum doloremque soluta, reiciendis in laboriosam quod cum ullam error non totam veniam? Esse nulla maxime amet!</p>
+                        <p className="leading-snug text-gray-700 font-bold text-2xl">Description: <span className='text-gray-600 text-lg font-normal'>{description}</span></p>
+                        <p className="leading-snug text-gray-700 font-bold text-2xl">Cost: <span className='text-yellow-500 text-xl font-semibold'>${price}</span></p>
                     </div>
                 </div>
             </div>

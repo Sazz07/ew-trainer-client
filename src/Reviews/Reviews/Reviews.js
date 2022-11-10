@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import AddReview from '../AddReview/AddReview';
 import ReviewCard from '../ReviewCard/ReviewCard';
 
 const Reviews = () => {
+    const { user } = useContext(AuthContext);
     return (
         <div>
             <div className='max-w-screen-xl mx-auto my-20'>
@@ -19,10 +21,19 @@ const Reviews = () => {
                     <h2 className='text-3xl text-violet-600 font-bold mb-5'>Want to add a review?</h2>
                 </div>
                 <div>
-                    <h2 className='text-2xl text-violet-600 font-semibold mb-5 text-center'>Please <Link to='/login' className="underline text-rose-700 font-semibold"> Log in</Link> to add a review.</h2>
-                    <div className='flex justify-center'>
-                    <AddReview></AddReview>
-                </div>
+                    {
+                        user?.email
+                            ?
+                            <>
+                                <div className='flex justify-center'>
+                                    <AddReview></AddReview>
+                                </div>
+                            </>
+                            :
+                            <>
+                                <h2 className='text-2xl text-violet-600 font-semibold mb-5 text-center'>Please <Link to='/login' className="underline text-rose-700 font-semibold"> Log in</Link> to add a review.</h2>
+                            </>
+                    }
                 </div>
             </div>
         </div>
