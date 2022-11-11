@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import toast from 'react-hot-toast';
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 
@@ -9,6 +10,11 @@ const Login = () => {
     useTitle('Login');
     const { login, setLoading, signInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
+
     // Checking state for toggle
     const [check, setCheck] = useState(false);
     const handleCheck = event => {
@@ -31,7 +37,7 @@ const Login = () => {
                 console.log(user);
                 form.reset();
                 setError('');
-                alert('login done');
+                toast.success('Login Successful');
             })
             .catch(error => {
                 console.error(error);
@@ -49,6 +55,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.error(error);

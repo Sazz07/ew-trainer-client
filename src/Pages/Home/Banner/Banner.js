@@ -1,6 +1,7 @@
 import React from 'react';
 import Lottie from 'lottie-react'
 import trainer from '../../../assets/trainer.json'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -17,6 +18,9 @@ const Banner = () => {
                                 Regular physical activity is one of the most important things you can do for your health. Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities.
                             </p>
                         </div>
+                        <Link to='/services'>
+                            <button type="button" className="px-8 py-3 font-semibold border rounded border-gray-900 text-gray-900 hover:bg-red-400">Get Started</button>
+                        </Link>
                     </div>
                     <div className='relative lg:w-1/2 '>
                         <div className='w-full lg:w-4/5 lg:ml-auto h-56  sm:h-96'>

@@ -11,7 +11,7 @@ const ServiceDetails = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`https://e-trainer.vercel.app/reviews?service=${_id}`)
+        fetch(`https://e-trainer.vercel.app/review?service_id=${_id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [_id])
@@ -25,6 +25,7 @@ const ServiceDetails = () => {
         const review = {
             service_id: _id,
             email: user?.email,
+            service: title,
             name: user?.displayName,
             image: user?.photoURL,
             service_img: img,

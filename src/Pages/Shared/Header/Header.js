@@ -49,12 +49,12 @@ const Header = () => {
         </li>
         <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
             <Link
-                to="/"
-                aria-label="About us"
-                title="About us"
+                to="/faq"
+                aria-label="faq"
+                title="faq"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-rose-400"
             >
-                About us
+                Faq
             </Link>
         </li>
     </>
@@ -66,12 +66,12 @@ const Header = () => {
                 <>
                     <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
                         <Link
-                            to="/additems"
-                            aria-label="Add Items"
-                            title="Add Items"
+                            to="/addservice"
+                            aria-label="Add Service"
+                            title="Add Service"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-rose-400"
                         >
-                            Add Items
+                            Add Service
                         </Link>
                     </li>
                     <li className='py-2 rounded-lg hover:bg-gray-200 hover:px-2'>
@@ -117,13 +117,13 @@ const Header = () => {
                 <div className="flex items-center">
                     <Link
                         to="/"
-                        aria-label="GadgetLand"
-                        title="GadgetLand"
+                        aria-label="EW-trainer"
+                        title="EW-trainer"
                         className="inline-flex items-center mr-8"
                     >
                         <img className='h-8' src={icon} alt="" />
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase hover:text-rose-500">
-                            Gadget-Land
+                            EW-trainer
                         </span>
                     </Link>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -162,13 +162,13 @@ const Header = () => {
                                     <div>
                                         <Link
                                             to="/"
-                                            aria-label="GadgetLand"
-                                            title="GadgetLand"
+                                            aria-label="Ew-trainer"
+                                            title="Ew-trainer"
                                             className="inline-flex items-center"
                                         >
                                             <img className='h-8' src={icon} alt="" />
                                             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                GadgetLand
+                                                EW-trainer
                                             </span>
                                         </Link>
                                     </div>

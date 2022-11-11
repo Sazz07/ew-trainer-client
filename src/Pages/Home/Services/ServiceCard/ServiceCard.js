@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
 
-    const { _id, img, title, description } = service;
+    const { _id, img, title, description, price } = service;
 
     return (
         <div>
@@ -20,8 +20,11 @@ const ServiceCard = ({ service }) => {
                         <h2 className="text-xl font-semibold tracking-wide">{title}</h2>
                         <p className="">{description.slice(0, 90) + '...'}</p>
                     </div>
+                    <div className="space-y-2">
+                        <p className="text-lg text-yellow-500 font-semibold">Price: ${price}</p>
+                    </div>
                     <Link to={`/servicedetails/${_id}`}>
-                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-gray-900">Read more</button>
+                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-gray-900">View Details</button>
                     </Link>
                 </div>
             </div>
